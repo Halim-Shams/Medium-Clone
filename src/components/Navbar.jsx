@@ -22,7 +22,7 @@ function Navbar() {
 			</div>
 			<div className='icons'>
 				<NavLink
-					to={'/'}
+					to={'/'} end
 					className={({isActive}) => (isActive ? 'isActive' : null)}>
 					<IoHome />
 				</NavLink>
