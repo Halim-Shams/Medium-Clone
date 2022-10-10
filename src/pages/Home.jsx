@@ -1,9 +1,10 @@
 import React from 'react';
 import Articles from '../components/Articles';
+import '../index.css';
 
 function Home() {
 	return (
-		<div>
+		<div className='app'>
 			<Articles />
 		</div>
 	);

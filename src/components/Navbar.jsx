@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import '../index.css';
 import {FiHome, FiBell, FiBookmark} from 'react-icons/fi';
 import {TiHome} from 'react-icons/ti';
 import {
@@ -13,80 +14,87 @@ import {NavLink} from 'react-router-dom';
 
 function Navbar() {
 	return (
-		<Nav className='nav-bar'>
-			<Brand className='brand'>
-				<SlargeLink to={'/'}>
+		<nav className='nav-bar'>
+			<div className='brand'>
+				<NavLink to={'/'}>
 					<BsMedium />
-				</SlargeLink>
-			</Brand>
-			<Actions className='icons'>
-				<Slink to={'/'}>
+				</NavLink>
+			</div>
+			<div className='icons'>
+				<NavLink
+					to={'/'}
+					className={({isActive}) => (isActive ? 'isActive' : null)}>
 					<IoHome />
-				</Slink>
-				<Slink to={'/Notifications'}>
+				</NavLink>
+				<NavLink
+					to={'/Notifications'}
+					className={({isActive}) => (isActive ? 'isActive' : null)}>
 					<BsBellFill />
-				</Slink>
-				<Slink to={'/Bookmarks'}>
+				</NavLink>
+				<NavLink
+					to={'/Bookmarks'}
+					className={({isActive}) => (isActive ? 'isActive' : null)}>
 					<BsBookmarkFill />
-				</Slink>
-				<Slink to={'/Stories'}>
+				</NavLink>
+				<NavLink
+					to={'/Stories'}
+					className={({isActive}) => (isActive ? 'isActive' : null)}>
 					<IoReader />
-				</Slink>
-			</Actions>
-			<Profile className='profile'>
-				<SlargeLink to={'/me'}>
+				</NavLink>
+			</div>
+			<div className='profile'>
+				<NavLink to={'/me'}>
 					<BsPersonCircle />
-				</SlargeLink>
-			</Profile>
-		</Nav>
+				</NavLink>
+			</div>
+		</nav>
 	);
 }
 
-const Nav = styled.nav`
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	width: 5.48rem;
-	border-right: 1.5px solid #dee2e6a0;
-`;
+// const Nav = styled.nav`
+// 	margin: 0;
+// 	padding: 0;
+// 	position: absolute;
+// 	height: 100vh;
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	width: 5.48rem;
+// 	border-right: 1.5px solid #dee2e6a0;
+// `;
 
-const Actions = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 2.5rem;
-`;
+// const div = styled.div`
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap: 2.5rem;
+// `;
 
-const Slink = styled(NavLink)`
-	svg {
-		font-size: 1.6rem;
-		fill: #000;
-	}
-	&.active {
-		svg {
-			fill: #fab005;
-		}
-	}
-`;
-const SlargeLink = styled(NavLink)`
-	&.nth-child(1) {
-		font-size: 3rem;
-	}
-	svg {
-		fill: #000;
-	}
-`;
+// const NavLink = styled(NavLink)`
+// 	&.active {
+// 		svg {
+// 			fill: #fab005;
+// 		}
+// 	}
+// `;
+// const SlargeLink = styled(NavLink)`
+// 	&.nth-child(1) {
+// 		font-size: 3rem;
+// 	}
+// 	svg {
+// 		fill: #000;
+// 	}
+// `;
 
-const Brand = styled.div`
-	padding-top: 2rem;
-	font-size: 2.5rem;
-	stroke-width: 0;
-`;
+// const Brand = styled.div`
+// 	padding-top: 2rem;
+// 	font-size: 2.5rem;
+// 	stroke-width: 0;
+// `;
 
-const Profile = styled.div`
-	padding-bottom: 1.6rem;
-	font-size: 2rem;
-`;
+// const Profile = styled.div`
+// 	padding-bottom: 1.6rem;
+// 	font-size: 2rem;
+// `;
 
 export default Navbar;

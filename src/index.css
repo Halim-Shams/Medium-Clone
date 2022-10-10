@@ -1,6 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* @media only screen and (max-width: 1080px) {
+    .nav-bar {
+        height: 5rem;
+        width: 100vh;
+        background-color: #adb5bd;
+        flex-direction: row;
+    }
+}
+
+.app {
+    position: absolute;
+    left: 5.45rem;
+    width: 60%;
+} */
+
+
+/* NAVBAR */
+
+nav {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 5.48rem;
+    border-right: 1.5px solid #dee2e6a0;
+}
+
+.brand {
+    padding-top: 2rem;
+    font-size: 2.5rem;
+    stroke-width: 0;
+}
+
+.brand svg {
+    fill: #000;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.icons svg {
+    font-size: 1.6rem;
+    fill: #000;
+}
+
+.isActive svg {
+    fill: #fab005;
+}
+
+.profile {
+    padding-bottom: 1.6rem;
+    font-size: 2rem;
+}
+
+.profile svg {
+    fill: #000;
 }
