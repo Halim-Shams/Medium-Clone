@@ -8,25 +8,25 @@ Make sure you've installed [git](https://git-scm.com/) and [npm](https://docs.np
 
 ### Steps
 
-1. Clone/Fork the Repo
+1. Clone/Fork the Repo and then clone the Repo from your GitHub account, change the {your-username} to what your username is:
 
 ```bash
-git clone https://github.com/Halim-Shams/Medium-Clone.git
+git clone https://github.com/{your-username}/Medium-Clone.git
 ```
 
-2. Go into the project root directory
+2. Go into the project root directory:
 
 ```bash
 cd medium-clone-app
 ```
 
-3. Install all the dependencies
+3. Install all the dependencies:
 
 ```bash
 npm install
 ```
 
-4. Start the application development server
+4. Start the application development server:
 
 ```bash
 npm start
