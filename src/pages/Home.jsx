@@ -6,6 +6,18 @@ function Home() {
 	return (
 		<div className='app'>
 			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
+			<Articles />
 		</div>
 	);
 }
